@@ -13,34 +13,18 @@
 #### 1) Install Mysql server or create docker image
 
 ```
-// Pull  MySql docker container
+// Pull Redis docker container
 
-docker pull mysql:8.0.1 
+docker pull redis
 ```
 
 ```
-// Run MySql docker container
+// Run Redis docker container
 
-docker run -p 3306:3306 --name sql-container -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.1
-```
+docker run --name redis -d redis
+``
 
-```
-// Pull PhpMyAdmin docker container
-
-docker pull phpmyadmin/phpmyadmin:latest 
-```
-
-```
-// Pull PhpMyAdmin docker container
-
-docker run --name phpmyadmin-container -d --link sql-container:db -p 8081:80 phpmyadmin/phpmyadmin
-```
-
-#### 2) Create a database. Need to open the console phpmyadmin: http://localhost:8081/ and create database shedlock_DB
-
-#### 3) Copy the project from git repository -https://github.com/lizaseletsova/scaling-spring-boot-microservice-schedule.git
-
-#### 4) To run the application, run the following command in a terminal window (in the complete) directory:
+#### 2) To run the application, run the following command in a terminal window (in the complete) directory:
 
 ```
 //Build the project with Gradle

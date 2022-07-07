@@ -1,5 +1,4 @@
 <h2>Redis message queue for microservices</h2>
-<h2>What problem is being solved?</h2>
 <h2>Technologies:</h2>
 <h3>
 <ul>

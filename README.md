@@ -22,7 +22,7 @@ docker pull redis
 // Run Redis docker container
 
 docker run --name redis -d redis
-``
+```
 
 #### 2) To run the application, run the following command in a terminal window (in the complete) directory:
 

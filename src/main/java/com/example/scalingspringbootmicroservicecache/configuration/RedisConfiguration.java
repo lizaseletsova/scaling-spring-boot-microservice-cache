@@ -18,7 +18,7 @@ import java.util.concurrent.CountDownLatch;
  *
  */
 @Configuration
-public class RedisEventConfiguration {
+public class RedisConfiguration {
     public static final String TOPIC = "messageQueue";
 
 

@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Example a simple message wrapped into an object
+ * Example message wrapped into an object
  *
  */
 @NoArgsConstructor

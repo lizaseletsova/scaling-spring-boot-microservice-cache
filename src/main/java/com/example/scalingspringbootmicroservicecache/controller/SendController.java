@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Sample controller for sending messages, this can be an controller sending messages to a websocket in
+ * The controller for sending messages, this can be a controller sending messages to a websocket in
  * background and use redis to scale across multiple instances
  *
  */

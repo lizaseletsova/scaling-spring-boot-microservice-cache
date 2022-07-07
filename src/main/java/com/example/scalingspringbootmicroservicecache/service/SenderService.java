@@ -9,9 +9,6 @@ import org.springframework.dao.QueryTimeoutException;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
 /**
  * The type Sender service.
  */
@@ -20,7 +17,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class SenderService {
     private final RedisTemplate<String, Object> redisTemplate;
-    private final CountDownLatch latch;
 
     /**
      * Send message to redis
@@ -38,10 +34,5 @@ public class SenderService {
             throw new SendException("Something bad happened");
         }
 
-        try {
-            latch.await(50, TimeUnit.MILLISECONDS);
-        } catch (InterruptedException e) {
-            log.error("Error sending message", e);
-        }
     }
 }
